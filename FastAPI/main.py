@@ -15,9 +15,9 @@ app.add_middleware(
 
 # Variable global para mantener el estado del afinador
 data = {
-    "order": "",
-    "frequency": 220,
-    "note": "A",
+    "order": "x",
+    "frequency": "x",
+    "note": "x",
 }
 
 # Decorador para manejar la ruta GET en /api

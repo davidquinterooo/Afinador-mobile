@@ -52,12 +52,17 @@
         <div class="card main-card">
           <div class="card-body text-center text-white">
             <div class="poc-wrapper">
-              <div class="poc-container">
-                <header>
-                  <p class="subtitle">Nota: {{ currentNote }} ({{ nomenclatureNote }})</p>
+              <div class="poc-container" style="background: #201512; color: #FFFFFF;">
+                <header style="color: #FFFFFF;">
+                  <p class="subtitle">
+                    <span v-if="nomenclatureNote === 'X' || nomenclatureNote === 'x' || nomenclatureNote === ''">
+                      No se ha detectado una cuerda
+                    </span>
+                    <span v-else>
+                      Nota: {{ currentNote }} ({{ nomenclatureNote }})
+                    </span>
+                  </p>
                   <p class="subtitle">Frecuencia ideal: {{ idealFrequency }} Hz</p>
-                  <p class="subtitle">Rango min. de frecuencia: {{ minFrequency }} Hz</p>
-                  <p class="subtitle">Rango max. de frecuencia: {{ maxFrequency }} Hz</p>
                   <p class="subtitle">Frecuencia actual: {{ currentFrequency }} Hz</p>
                 </header>
 
@@ -299,7 +304,7 @@ const readAPI = async () => {
       const frequency = response.data.frequency
 
       // Lógica de "Reposo": Si no hay nota o frecuencia, reseteamos a 0
-      if (!note || !frequency) {
+      if (note === 'X' || note === 'x' || note === '') {
         currentNote.value = ''
         currentFrequency.value = 0
         nomenclatureNote.value = ''
@@ -368,3 +373,18 @@ onUnmounted(() => {
   if (timer) clearInterval(timer);
 });
 </script>
+
+<style scoped>
+  .subtitle {
+    color: #FFFFFF;
+  }
+
+  .poc-wrapper {
+    margin-top: -125px;
+  }
+
+  .poc-container {
+    border: none;
+    box-shadow: none
+  }
+</style>

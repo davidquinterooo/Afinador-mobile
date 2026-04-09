@@ -116,11 +116,11 @@ const readAPI = async () => {
     // $fetch devuelve los datos directamente, no un objeto { data, error }
     const response = await $fetch(`${apiBase}/`)
 
-    if (response.data.order === 41 || response.data.order === '41') {
+    if (response.data.order === 1 || response.data.order === '1') {
       navigateTo('/cuerdas/4/cuatro')
-    } if (response.data.order === 42 || response.data.order === '42') {
+    } if (response.data.order === 2 || response.data.order === '2') {
       navigateTo('/cuerdas/4/ukelele')
-    } if (response.data.order === 43 || response.data.order === '43') {
+    } if (response.data.order === 3 || response.data.order === '3') {
       navigateTo('/cuerdas/4/banjo')
     } if (response.data.order === 0 || response.data.order === '0') {
       navigateTo('/')
