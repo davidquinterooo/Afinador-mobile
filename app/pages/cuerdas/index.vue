@@ -13,8 +13,8 @@
     </div>
     <div class="container">
       <!-- Columnas para mostrar las opciones de cuerdas -->
-      <div class="row">
-        <div class="col-4 col-sm-4">
+      <div class="container-card row">
+        <div class="tarjetas col-4 col-sm-4">
           <div class="card main-card">
             <div class="card-body text-center text-white">
               <img
@@ -39,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 col-sm-4">
+        <div class="tarjetas col-4 col-sm-4">
           <div class="card main-card">
             <div class="card-body text-center text-white">
               <img
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 col-sm-4">
+        <div class="tarjetas col-4 col-sm-4">
           <div class="card main-card">
             <div class="card-body text-center text-white">
               <img
@@ -159,3 +159,18 @@ onUnmounted(() => {
   if (timer) clearInterval(timer);
 });
 </script>
+
+<style scoped>
+@media (max-width: 768px){
+  .container-card{
+    display: flex;
+    flex-direction: column !important;;
+    align-items: center;
+    gap: 10px;
+  }
+  .tarjetas{
+    width: 100vw;
+    margin: auto;
+  }
+}
+</style>
