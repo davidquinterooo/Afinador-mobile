@@ -9,8 +9,8 @@
     <h5 class="text-lightgray text-center mt-4 mb-5">
       Toca la cuerda de tu elección y observa cómo se afina automáticamente
     </h5>
-    <div class="row mb-4 mt-4">
-      <div class="col-6 col-sm-6">
+    <div class="container-card row mb-4 mt-4">
+      <div class="tarjetas col-12 col-md-6">
         <div class="card main-card">
           <div class="card-body text-center text-white">
             <button
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-sm-6">
+      <div class="tarjeta-1 col-12 col-md-6">
         <div class="card main-card">
           <div class="card-body text-center text-white">
             <div class="poc-wrapper">
@@ -87,16 +87,16 @@
       <NuxtLink to="/" class="navbar-brand">
         <button
           type="button"
-          class="btn btn-primary btn-lg btn-start-main mt-4 mb-4"
+          class="btn btn-primary btn-lg btn-start-main mt-4 mb-4 btn-inicio"
         >
           <font-awesome-icon
             icon="fa-solid fa-hand-pointer"
             class="color-orange-app"
           />
-          <b>
+          <!-- <b>
             Presiona <span class="color-orange-app">0</span> en tu teclado para
             <span class="color-orange-app">volver a inicio</span>
-          </b>
+          </b> -->
         </button>
       </NuxtLink>
     </div>
@@ -379,12 +379,31 @@ onUnmounted(() => {
     color: #FFFFFF;
   }
 
-  .poc-wrapper {
-    margin-top: -125px;
-  }
-
   .poc-container {
     border: none;
     box-shadow: none
   }
+
+  canvas {
+    width: 100% !important; 
+    max-width: 400px;       
+    height: auto;         
+  }
+
+  .tuner-container {
+    width: 100%;
+    overflow: hidden;      
+  }
+
+  @media (max-width: 1204px) {
+
+    .container-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  
 </style>
