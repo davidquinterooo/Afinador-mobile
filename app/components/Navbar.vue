@@ -5,7 +5,7 @@
         <span class="color-orange-app">
           <font-awesome-icon icon="fa-solid fa-music" />
         </span>
-        <span class="text-white">
+        <span class="text-white titulo-navBar">
           Afinador de Instrumentos
         </span>
       </NuxtLink>
@@ -101,3 +101,9 @@ const breadcrumbs = computed(() => {
   return crumbs
 })
 </script>
+
+<style scoped>
+.titulo-navBar {
+  font-size: clamp(14px, 4.5vw, 20px);
+}
+</style>
