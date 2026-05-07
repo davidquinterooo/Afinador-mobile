@@ -51,7 +51,7 @@
       <div class="tarjeta-1 col-12 col-md-6 mb-3">
         <div class="card main-card">
           <div class="card-body text-center text-white">
-            <div class="poc-wrapper">
+            <div class="">
               <div class="poc-container" style="background: #201512; color: #FFFFFF;">
                 <header style="color: #FFFFFF;">
                   <p class="subtitle">
