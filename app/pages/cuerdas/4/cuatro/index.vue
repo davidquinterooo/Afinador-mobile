@@ -9,8 +9,8 @@
     <h5 class="text-lightgray text-center mt-4 mb-5">
       Toca la cuerda de tu elección y observa cómo se afina automáticamente
     </h5>
-    <div class="container-card row mb-4 mt-4">
-      <div class="tarjetas col-12 col-md-6">
+    <div class="container-card row mb-4 mt-4 d-flex align-items-stretch">
+      <div class="tarjetas col-12 col-md-6 mb-3">
         <div class="card main-card">
           <div class="card-body text-center text-white">
             <button
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="tarjeta-1 col-12 col-md-6">
+      <div class="tarjeta-1 col-12 col-md-6 mb-3">
         <div class="card main-card">
           <div class="card-body text-center text-white">
             <div class="poc-wrapper">
@@ -87,16 +87,16 @@
       <NuxtLink to="/" class="navbar-brand">
         <button
           type="button"
-          class="btn btn-primary btn-lg btn-start-main mt-4 mb-4 btn-inicio"
+          class="btn-inicio btn btn-primary btn-lg btn-start-main mt-4 mb-4"
         >
           <font-awesome-icon
             icon="fa-solid fa-hand-pointer"
             class="color-orange-app"
           />
-          <!-- <b>
+          <b>
             Presiona <span class="color-orange-app">0</span> en tu teclado para
             <span class="color-orange-app">volver a inicio</span>
-          </b> -->
+          </b>
         </button>
       </NuxtLink>
     </div>
@@ -375,25 +375,45 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+  .btn-inicio {
+    width: 85%; /* Un poco más de margen en los lados */
+    max-width: 500px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: left;
+    padding: 15px 20px;
+    font-size: 1.1rem; /* Tamaño base */
+    white-space: normal; /* Permite que el texto baje a otra línea */
+    word-wrap: break-word;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+  }
+
   .poc-container{
     border: none;
   }
-  .tarjeta-1, .tarjetas {
+
+  .tarjetas, .tarjeta-1 {
+    /* Eliminamos width: 50% para que Bootstrap use col-md-6 correctamente */
     display: flex;
-    justify-content: center;
-    transition: width 0.3s ease;
-    width: 50%; 
+    flex-direction: column; 
+    transition: all 0.3s ease;
+    height: auto;
+  }
+
+  .tarjetas{
     height: 50%;
   }
 
-  .tarjeta-1{
-    padding: 0;
-    margin: 0;
+  .main-card {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .tuner-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     margin: 0 auto;
     position: relative; 
     aspect-ratio: 400 / 480; 
@@ -403,7 +423,6 @@ onUnmounted(() => {
   canvas {
     width: 100% !important;
     height: auto !important;
-    display: block;
   }
 
   .note-name, .frequency-display, .tuning-status {
@@ -415,11 +434,17 @@ onUnmounted(() => {
     width: 100%;
   }
 
+    .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
   @media (max-width: 1199px){
+    .container-card{
+      gap:10px;
+    }
     .tarjeta-1, .tarjetas {
-      width: 100% !important; /* Ocupa el ancho total */
-      max-width: 100% !important;
-      flex: 0 0 100%;
+      min-width: 100% !important;
       margin: 0 auto;
     }
     
@@ -437,6 +462,16 @@ onUnmounted(() => {
     }
   }
 
+  @media (max-width: 810px){
+    .btn-inicio {
+      font-size: 1rem;
+      padding: 12px 15px;
+    }
+    .container-card{
+      gap: 10px;
+    }
+  }
+
   @media (max-width: 445px){
     .tuner-container {
       max-width: 100%;
@@ -449,6 +484,15 @@ onUnmounted(() => {
 
     .frequency-display {
       top: 77% !important;
+    }
+
+    .btn-inicio {
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+    .btn-inicio b {
+      font-weight: 600;
     }
   }
 
@@ -466,8 +510,10 @@ onUnmounted(() => {
       top: 50% !important;
       font-size: 1.8em;
     }
+
+    .btn-inicio {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
   }
-
-
-
 </style>
