@@ -17,14 +17,14 @@
               type="button"
               class="btn btn-primary btn-lg btn-start-detect mt-4"
             >
-              <div v-if="currentNote === ''">
+              <div class="text-canva" v-if="currentNote === ''">
                 <span class="text-lightgray">
                   <font-awesome-icon icon="fa-solid fa-music" />
                   No se ha detectado una cuerda
                 </span>
               </div>
 
-              <div v-else>
+              <div class="text-canva" v-else>
                 <span class="text-white">
                   <span class="color-orange-app">
                     <font-awesome-icon icon="fa-solid fa-music" />
@@ -375,35 +375,99 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-  .subtitle {
-    color: #FFFFFF;
-  }
-
-  .poc-container {
+  .poc-container{
     border: none;
-    box-shadow: none
+  }
+  .tarjeta-1, .tarjetas {
+    display: flex;
+    justify-content: center;
+    transition: width 0.3s ease;
+    width: 50%; 
+    height: 50%;
   }
 
-  canvas {
-    width: 100% !important; 
-    max-width: 400px;       
-    height: auto;         
+  .tarjeta-1{
+    padding: 0;
+    margin: 0;
   }
 
   .tuner-container {
     width: 100%;
-    overflow: hidden;      
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative; 
+    aspect-ratio: 400 / 480; 
+    overflow: hidden;
   }
 
-  @media (max-width: 1204px) {
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
 
-    .container-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+  .note-name, .frequency-display, .tuning-status {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 1199px){
+    .tarjeta-1, .tarjetas {
+      width: 100% !important; /* Ocupa el ancho total */
+      max-width: 100% !important;
+      flex: 0 0 100%;
+      margin: 0 auto;
+    }
+    
+    .tuner-container {
+      max-width: 380px; 
+    }
+
+    .note-name {
+      top: 15% !important;
+      font-size: 3rem;
+    }
+
+    .frequency-display {
+      top: 78% !important;
     }
   }
 
-  
+  @media (max-width: 445px){
+    .tuner-container {
+      max-width: 100%;
+    }
+
+    .note-name {
+      top: 15% !important;
+      font-size: 3rem;
+    }
+
+    .frequency-display {
+      top: 77% !important;
+    }
+  }
+
+  @media (max-width: 404px){
+    .text-canva{
+      font-size: .7em;
+    }
+
+    .note-name {
+      top: 15% !important;
+      font-size: 1.8em;
+    }
+
+    .frequency-display {
+      top: 50% !important;
+      font-size: 1.8em;
+    }
+  }
+
+
+
 </style>

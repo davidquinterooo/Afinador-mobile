@@ -1,0 +1,130 @@
+  .subtitle {
+    color: #FFFFFF;
+  }
+
+  .poc-container {
+    border: none;
+    box-shadow: none
+  }
+
+  .tuner-container {
+    max-width: 400px;
+    max-height: 440px;
+    margin: 0 auto;
+    position: relative; 
+    /* Mantenemos un ratio de aspecto para que el contenedor no colapse */
+    aspect-ratio: 400 / 480; 
+    overflow: hidden;
+  }
+  canvas {
+    width: 100% !important;
+    height: 100% !important; /* Que llene el contenedor con aspect-ratio */
+    display: block;
+  }
+/* POSICIONAMIENTO UNIVERSAL (Usando % para que siempre escalen) */
+  .note-name {
+    position: absolute;
+    top: 15%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem; 
+    font-weight: bold;
+    z-index: 2;
+    margin: 0;
+  }
+  .frequency-display {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    z-index: 2;
+  }
+  .tuning-status {
+    position: absolute;
+    bottom: 5%; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    z-index: 2;
+  }
+  .tarjeta-1 {
+    transition: width 0.3s ease;
+  }
+  @media (max-width: 767px) {
+
+    .tuner-container {
+      max-width: 320px; /* Un poco más pequeño para móviles pequeños */
+      max-height: 380px;
+      font-size: 14px; /* Ajuste de base */
+    }
+
+    /* Aquí ajustas las posiciones si el dibujo del canvas cambia en móvil */
+    .note-name {
+      top: 17% !important; 
+      font-size: 2.5rem;
+    }
+
+    .frequency-display {
+      top: 75% !important;
+      font-size: 1.4rem;
+    }
+
+    .tuning-status {
+      bottom: 2%;
+      font-size: 1rem;
+    }
+  }
+
+
+
+@media (width: 991px){
+  .tuner-container {
+    width: 100%;
+    max-width: 420px; /* Un poco más pequeño para móviles pequeños */
+    max-height: 480px;
+    font-size: 14px; /* Ajuste de base */
+  }
+  .note-name {
+  top: 9%; /* Ajustado un poco más arriba del centro */
+  font-size: 2em; /* Ahora es relativo al contenedor */
+  }
+  .frequency-display {
+    top: 35%;
+    font-size: 1.5em;
+  }
+  .tuning-status {
+    bottom: 0%; /* Posición relativa al alto del contenedor */
+    font-size: 1.1em; /* Texto proporcional */
+  }
+}
+
+@media (max-width:990px){
+  .note-name{
+  top: 9%; /* Ajustado un poco más arriba del centro */
+  font-size: 2em; /* Ahora es relativo al contenedor */
+  }
+  .frequency-display {
+    top: 35%;
+  }
+  .tuning-status {
+    font-size: 1.1em; /* Texto proporcional */
+  }
+}
+
+@media (width: 1200px){
+.note-name {
+  top: 16%; /* Ajustado un poco más arriba del centro */
+  font-size: 3em; /* Ahora es relativo al contenedor */
+}
+.tuning-status {
+  bottom: 0%; 
+  font-size: 1.1em; /* Texto proporcional */
+}
+.frequency-display {
+  top: 75%;
+  font-size: 1.5em;
+}
+}
