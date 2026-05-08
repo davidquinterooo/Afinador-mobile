@@ -17,14 +17,14 @@
               type="button"
               class="btn btn-primary btn-lg btn-start-detect mt-4"
             >
-              <div class="text-canva" v-if="currentNote === ''">
+              <div v-if="currentNote === ''" class="text-canva">
                 <span class="text-lightgray">
                   <font-awesome-icon icon="fa-solid fa-music" />
                   No se ha detectado una cuerda
                 </span>
               </div>
 
-              <div class="text-canva" v-else>
+              <div v-else class="text-canva">
                 <span class="text-white">
                   <span class="color-orange-app">
                     <font-awesome-icon icon="fa-solid fa-music" />
