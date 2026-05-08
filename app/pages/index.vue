@@ -17,7 +17,7 @@
               icon="fa-solid fa-hand-pointer"
               class="color-orange-app"
             />
-            <b>Presiona <span class="color-orange-app">1</span> para iniciar</b>
+            <b>Presiona <span class="color-orange-app">*</span> para iniciar</b>
           </button>
         </NuxtLink>
         <!-- Final del botón para entrar al menú -->
@@ -46,7 +46,7 @@ const readAPI = async () => {
     // $fetch devuelve los datos directamente, no un objeto { data, error }
     const response = await $fetch(`${apiBase}/`)
 
-    if (response.data.order === 1 || response.data.order === '1') {
+    if (response.data.order === '*') {
       navigateTo('/cuerdas')
     } if (response.data.order === 0 || response.data.order === '0') {
       navigateTo('/')

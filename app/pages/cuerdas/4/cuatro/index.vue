@@ -375,6 +375,19 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+  .subtitle {
+    color: #FFFFFF;
+  }
+
+  .poc-wrapper {
+    margin-top: -125px;
+  }
+
+  .poc-container {
+    border: none;
+    box-shadow: none
+  }
+
   .btn-inicio {
     width: 85%; /* Un poco más de margen en los lados */
     max-width: 500px;
