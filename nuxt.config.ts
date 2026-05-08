@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // Desactiva el renderizado del lado del servidor para exportación estática (SSG)
+  ssr: false,
+
   compatibilityDate: '2025-07-15',
 
   // 1. Configuración de Proxy con Nitro
@@ -44,6 +47,15 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&display=swap' }
       ]
+    }
+  },
+
+  // Configuración para el despliegue estático con Nginx
+  nitro: {
+    serveStatic: true,
+    // Asegura que todas las rutas se generen correctamente
+    prerender: {
+      crawlLinks: true
     }
   },
 
