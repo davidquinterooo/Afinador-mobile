@@ -33,11 +33,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'es'
       },
-      title: 'SINIDOT V2 - Sistema de Gestión',
+      title: 'Afinador App',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', content: 'Sistema Integral de Donación y Trasplante' },
+        { hid: 'description', content: 'Afinador App' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'author', content: 'Ing. Argenis Osorio' }
       ],
