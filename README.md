@@ -1,3 +1,4 @@
+HEAD
 <h1>Afinador de Cuerdas Automático</h1>
 
 .....
@@ -81,7 +82,6 @@ $ npm run dev
 La aplicación Nuxt estará disponible en http://localhost:3000/
 
 Notas de desarrollo
-===================
 
 Órdenes del backend para navegar en la app:
 
@@ -106,3 +106,7 @@ El json que se va a recibir del API será:
     -Nota D (RE)
     -Nota F = F# (Fa#)
     -Nota B (Si)
+=======
+# Afinador-mobile
+Aplicación desarrollada con nuxt.js, para dispositivos móviles usando android studios
+68a47dc4fca61d6d37760ee58cd51d46a3f42556
