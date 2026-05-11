@@ -21,6 +21,7 @@
           </button>
         </NuxtLink>
         <!-- Final del botón para entrar al menú -->
+        
       </div>
     </div>
   </div>
