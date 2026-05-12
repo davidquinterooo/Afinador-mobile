@@ -109,4 +109,30 @@ El json que se va a recibir del API será:
 =======
 # Afinador-mobile
 Aplicación desarrollada con nuxt.js, para dispositivos móviles usando android studios
-68a47dc4fca61d6d37760ee58cd51d46a3f42556
+
+Transformar el sistema del afinador en una aplicación móvil nativa para Android utilizando Capacitor
+
+**Instala el núcleo y la CLI:**
+
+```
+npm install @capacitor/core @capacitor/cli @capacitor/android
+```
+
+**Inicializa Capacitor**
+
+```
+npx cap init
+```
+
+- **App name:** Nombre de la aplicación.
+- **App ID:** Identificador único (ej: com.tuempresa.app).
+- **Web asset directory:** Aquí es crucial poner la carpeta de salida del npm run generate (usualmente dist o .output/public).
+
+**Generamos la carpeta de exportacion**
+
+```
+npm run generate
+```
+
+**Agregar la plataforma Android**
+
