@@ -3,7 +3,7 @@ HEAD
 
 .....
 
-<h2>Prerrequisitos</h2>
+<h2>Prerequisitos</h2>
 
 ```
 Node.js >= v20.20.0
@@ -128,11 +128,23 @@ npx cap init
 - **App ID:** Identificador único (ej: com.tuempresa.app).
 - **Web asset directory:** Aquí es crucial poner la carpeta de salida del npm run generate (usualmente dist o .output/public).
 
-**Generamos la carpeta de exportacion**
+**Generamos la carpeta de exportacion para que Capacitor sepa qué copiar**
 
 ```
 npm run generate
 ```
 
 **Agregar la plataforma Android**
+
+```
+npx cap add android
+```
+
+Esto crea una carpeta llamada /android en la raíz del proyecto.
+Esta carpeta contiene el código nativo.
+
+**Configurar el .gitignore**
+
+Asegúrate de que tu .gitignore permita subir la carpeta /android, pero que ignore los archivos temporales de Gradle. Normalmente, el comando cap add ya crea un .gitignore dentro de la carpeta /android, así que no deberías tener problemas.
+
 
