@@ -178,7 +178,7 @@ Futuro desarrollo...<br>
   <i></i><br><br>
 </p>
 
-# Prerequisitos
+# Prerrequisitos
 
 ```
 Node.js >= v20.20.0
