@@ -1,4 +1,4 @@
-HEAD.
+HEAD
 <h1>Afinador de Cuerdas Automático</h1>
 
 .....
@@ -187,3 +187,65 @@ Cada vez que se haga un cambio en el diseño/lógica de Nuxt: Debes hacer npm ru
 En caso de que se instale un plugin nuevo: Deben correr npm install [nombre-del-plugin] y luego npx cap sync.
 
 Directorio de salida: Si notas que al abrir la app en Android sale una pantalla blanca, verifica que en el archivo capacitor.config.json el campo webDir coincida exactamente con la carpeta que genera Nuxt (ej: "webDir": "dist").
+
+**Error con la direccion: http://127.0.0.1:8000/api**
+
+Cuando corres Nuxt en tu navegador, 127.0.0.1 apunta a tu computadora. Pero cuando la app está dentro de un celular (o un emulador), 127.0.0.1 apunta al propio celular. Como el servidor FastAPI no está corriendo dentro del teléfono, la conexión falla.
+
+**Cambiar la IP en el archivo .env: **
+
+Debes usar la dirección IP local de la computadora donde está corriendo el servidor FastAPI.
+
+En la computadora que corre FastAPI, abre la terminal y busca su IP:
+
+- Windows: ipconfig (busca "Dirección IPv4", suele ser algo como 192.168.1.XX).
+- Linux/Mac: ifconfig o ip a.
+
+Actualiza tu .env de Nuxt:
+
+```
+# Reemplaza con la IP real de tu PC
+NUXT_PUBLIC_API_BASE=http://192.168.1.15:8000/api
+```
+**Configurar FastAPI para aceptar conexiones externas**
+Por defecto, muchos servidores locales solo escuchan peticiones de la misma máquina. Debes forzar a FastAPI a escuchar en todas las interfaces de red de tu PC:
+
+Modifica el comando con el que arrancas FastAPI:
+```
+# El host 0.0.0.0 permite que otros dispositivos de la red se conecten
+fastapi dev main.py --host 0.0.0.0 --port 8000
+```
+
+**Conectar los dispositivos a la misma red:**
+Para que esto funcione sin subir el API a internet (despliegue real):
+
+El teléfono físico y la computadora deben estar conectados a la misma red Wi-Fi.
+
+Si usas el emulador de Android Studio, la IP 192.168.1.XX debería funcionar, pero Android tiene una IP especial para referirse a la máquina host: 10.0.2.2. Sin embargo, usar la IP real de tu Wi-Fi es lo más confiable para ambos casos.
+
+**Configurar el "Cleartext" (Permisos de Android)**
+Android, por seguridad, bloquea por defecto las conexiones http (sin S). Como tu API local es http://, debes darle permiso explícito a la app:
+
+1. Ve a la carpeta de Android en tu proyecto: android/app/src/main/AndroidManifest.xml.
+2. Busca la etiqueta <application> y añade el atributo android:usesCleartextTraffic="true":
+
+```
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true"> ...
+</application>
+```
+
+**Actualizar el APK:**
+Cada vez que cambies el .env, debes repetir el proceso para que los cambios se reflejen en la carpeta de Android:
+
+npm run generate (para compilar Nuxt con la nueva IP).
+
+npx cap copy (para pasar los archivos nuevos a la carpeta android).
+
+En Android Studio, vuelve a generar el APK o dale a Run.
