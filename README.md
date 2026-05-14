@@ -103,7 +103,7 @@ Las notas que se van a recibir son:
 - Nota D (RE)
 - Nota F = F# (Fa#)
 - Nota B (Si)
-=======
+
 # Afinador-mobile
 Aplicación desarrollada con nuxt.js, para dispositivos móviles usando android studios
 
