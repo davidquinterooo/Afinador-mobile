@@ -15,6 +15,33 @@
 </p>
 
 <p align="center">
+<b>1.1 Despliegue y Versión Móvil (APK) </b><br>
+</p>  
+
+<p align="center">
+<img src="apk.jpg" alt="Afinador" width="300">
+</p>
+
+<p align="center">
+ Para garantizar la portabilidad y el uso en diversos entornos (como competiciones donde el uso de laptops está restringido), la aplicación ha sido empaquetada exitosamente como un archivo APK nativo. Esto permite llevar la precisión del afinador directamente en el bolsillo.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>1.2 Integración y Despliegue en Entorno Móvil </b><br>
+</p>  
+
+<p align="center">
+<img src="muestra.jpg" alt="Afinador" width="300">
+</p>
+
+<p align="center">
+La arquitectura de la aplicación ha sido optimizada para trascender el entorno web, logrando una transición fluida hacia una experiencia nativa en Android. El diseño se adapta de forma inteligente a la relación de aspecto de los dispositivos móviles, garantizando que el procesamiento de frecuencias y la respuesta visual mantengan la misma precisión y claridad que en la versión de escritorio.<br>
+  <i></i><br><br>
+</p>
+
+
+<p align="center">
 <b>2. Menú </b><br>
 </p>  
 
