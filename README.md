@@ -98,11 +98,11 @@ El json que se va a recibir del API será:
   }
 }
 
--Las notas que se van a recibir son:
-    -Nota A (LA)
-    -Nota D (RE)
-    -Nota F = F# (Fa#)
-    -Nota B (Si)
+Las notas que se van a recibir son:
+- Nota A (LA)
+- Nota D (RE)
+- Nota F = F# (Fa#)
+- Nota B (Si)
 =======
 # Afinador-mobile
 Aplicación desarrollada con nuxt.js, para dispositivos móviles usando android studios
