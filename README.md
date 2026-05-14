@@ -1,5 +1,156 @@
 # Afinador de Cuerdas Automático
 
+<p align="center">
+<b>1. Pantalla de Inicio</b><br>
+</p>  
+
+<p align="center">
+<img src="Inicio.jpg" alt="Afinador" width="300">
+</p>
+
+<p align="center">
+  Esta es la puerta de entrada a la aplicación. Su propósito es ofrecer una interfaz limpia y minimalista
+  que permita al usuario prepararse antes de comenzar el proceso de afinación, asegurando una experiencia libre de distracciones.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>2. Menú </b><br>
+</p>  
+
+<p align="center">
+<img src="Menu.jpg" alt="menú" width="300">
+</p>
+
+<p align="center">
+Esta sección permite al usuario gestionar su flujo de trabajo, facilitando el cambio entre diferentes instrumentos o la limpieza de la sesión actual.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>3. Selección por Número de Cuerdas </b><br>
+</p>  
+
+<p align="center">
+En esta etapa, el usuario define la complejidad del instrumento que desea afinar. La aplicación categoriza los instrumentos según su número de cuerdas para optimizar el algoritmo de detección de frecuencia.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<img src="cuatrocuerdas.jpg" alt="cuerdas" width="300">
+</p>
+
+<p align="center">
+<img src="seiscuerdas.jpg" alt="cuerdas" width="300">
+</p>
+
+<p align="center">
+<img src="ochocuerdas.jpg" alt="cuerdas" width="300">
+</p>
+
+<p align="center">
+<b>4. Selección de Instrumento Específico </b><br>
+</p>  
+
+<p align="center">
+Una vez definida la categoría por número de cuerdas, la aplicación filtra y despliega los instrumentos compatibles. Este paso es crucial para cargar las frecuencias exactas y el orden de las notas que el algoritmo debe reconocer.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>4.1. Catálogo de Instrumentos: 4 Cuerdas </b><br>
+</p>  
+
+<p align="center">
+Una vez definida la categoría por número de cuerdas, la aplicación filtra y despliega los instrumentos compatibles. Este paso es crucial para cargar las frecuencias exactas y el orden de las notas que el algoritmo debe reconocer.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<img src="cuatro.jpg" alt="instrumentos" width="300">
+</p>
+
+<p align="center">
+<img src="banjo.jpg" alt="instrumentos" width="300">
+</p>
+
+<p align="center">
+<img src="ukelele.jpg" alt="instrumentos" width="300">
+</p>
+
+<p align="center">
+<b>4.2. Catálogo de Instrumentos: 6 Cuerdas </b><br>
+</p>  
+
+
+<p align="center">
+Futuro desarrollo...<br>
+  <i></i><br><br>
+</p>
+
+
+<p align="center">
+<b>4.2. Catálogo de Instrumentos: 8 Cuerdas </b><br>
+</p>  
+
+<p align="center">
+Futuro desarrollo...<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>5. Interfaz de Afinación: Cuatro Venezolano</b><br>
+</p>  
+
+<p align="center">
+Una vez seleccionado el instrumento, la aplicación entra en modo de escucha activa. Esta pantalla está diseñada para procesar la señal de audio y compararla con las frecuencias estándar del Cuatro (afinación tradicional: La, Re, Fa#, Si).<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b> Notas </b><br>
+</p>  
+
+<p align="center">
+<img src="Notas.jpg" alt="instrumentos" width="300">
+</p>
+
+<p align="center">
+En esta pantalla, el sistema procesa la señal de audio capturada y ofrece una respuesta visual inmediata sobre la cuerda que se está ejecutando.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b> Frecuencias </b><br>
+</p>  
+
+<p align="center">
+<img src="frecuencia.jpg" alt="frecuencias" width="300">
+</p>
+
+<p align="center">
+Esta pantalla proporciona al usuario una referencia visual de alta precisión (estilo velocímetro) para lograr la afinación exacta.<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>5. Interfaz de Afinación: Banjo</b><br>
+</p>  
+
+<p align="center">
+Futuro desarrollo...<br>
+  <i></i><br><br>
+</p>
+
+<p align="center">
+<b>5. Interfaz de Afinación: Ukelele</b><br>
+</p>  
+
+<p align="center">
+Futuro desarrollo...<br>
+  <i></i><br><br>
+</p>
+
 # Prerequisitos
 
 ```
