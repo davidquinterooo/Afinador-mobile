@@ -192,7 +192,7 @@ Directorio de salida: Si notas que al abrir la app en Android sale una pantalla 
 
 Cuando corres Nuxt en tu navegador, 127.0.0.1 apunta a tu computadora. Pero cuando la app está dentro de un celular (o un emulador), 127.0.0.1 apunta al propio celular. Como el servidor FastAPI no está corriendo dentro del teléfono, la conexión falla.
 
-**Cambiar la IP en el archivo .env: **
+**Cambiar la IP en el archivo .env:**
 
 Debes usar la dirección IP local de la computadora donde está corriendo el servidor FastAPI.
 
@@ -244,8 +244,6 @@ Android, por seguridad, bloquea por defecto las conexiones http (sin S). Como tu
 **Actualizar el APK:**
 Cada vez que cambies el .env, debes repetir el proceso para que los cambios se reflejen en la carpeta de Android:
 
-npm run generate (para compilar Nuxt con la nueva IP).
-
-npx cap copy (para pasar los archivos nuevos a la carpeta android).
-
-En Android Studio, vuelve a generar el APK o dale a Run.
+- npm run generate (para compilar Nuxt con la nueva IP).
+- npx cap copy (para pasar los archivos nuevos a la carpeta android).
+- En Android Studio, vuelve a generar el APK o dale a Run.
