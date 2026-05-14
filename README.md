@@ -221,6 +221,7 @@ El teléfono físico y la computadora deben estar conectados a la misma red Wi-F
 Si usas el emulador de Android Studio, la IP 192.168.1.XX debería funcionar, pero Android tiene una IP especial para referirse a la máquina host: 10.0.2.2. Sin embargo, usar la IP real de tu Wi-Fi es lo más confiable para ambos casos.
 
 **Configurar el "Cleartext" (Permisos de Android)**
+
 Android, por seguridad, bloquea por defecto las conexiones http (sin S). Como tu API local es http://, debes darle permiso explícito a la app:
 
 1. Ve a la carpeta de Android en tu proyecto: android/app/src/main/AndroidManifest.xml.
