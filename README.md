@@ -1,9 +1,6 @@
-HEAD
-<h1>Afinador de Cuerdas Automático</h1>
+# Afinador de Cuerdas Automático
 
-.....
-
-<h2>Prerequisitos</h2>
+# Prerequisitos
 
 ```
 Node.js >= v20.20.0
