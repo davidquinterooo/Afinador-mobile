@@ -423,3 +423,32 @@ Cada vez que cambies el .env, debes repetir el proceso para que los cambios se r
 - npm run generate (para compilar Nuxt con la nueva IP).
 - npx cap copy (para pasar los archivos nuevos a la carpeta android).
 - En Android Studio, vuelve a generar el APK o dale a Run.
+
+
+## Conexion a la API ##
+Al aplicar esta configuracion, se instruye explícitamente al sistema operativo Android para que permita la coexistencia de recursos seguros e inseguros.
+```
+package com.afinadorMovile.app;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Obtener el WebView de Capacitor y permitir contenido mixto
+        WebView webView = this.bridge.getWebView();
+        if (webView != null) {
+            WebSettings settings = webView.getSettings();
+            settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+    }
+}
+```
